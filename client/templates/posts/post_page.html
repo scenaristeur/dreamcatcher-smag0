@@ -1,0 +1,32 @@
+<template name="postPage">
+  <div class="post-page page">
+    {{> postItem}}
+	
+	{{#if currentUser}}
+	    {{> statementSubmit}}
+    {{else}}
+      <p>Please log in to add a statement.</p>
+    {{/if}}
+	
+	{{#if currentUser}}
+	    {{> commentSubmit}}
+    {{else}}
+      <p>Please log in to leave a comment.</p>
+    {{/if}}
+	
+	 <ul class="comments">
+    {{#each statements}}
+      {{> statementItem}}
+    {{/each}}
+  </ul>
+	
+	  <ul class="comments">
+    {{#each comments}}
+      {{> commentItem}}
+    {{/each}}
+  </ul>
+ 
+  
+
+ </div>
+</template> 

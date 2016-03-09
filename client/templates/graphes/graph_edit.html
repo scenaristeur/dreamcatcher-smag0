@@ -1,0 +1,30 @@
+<template name="graphEdit">
+  <form class="main form page">
+    <div class="form-group {{errorClass 'sujet'}}">
+      <label class="control-label" for="sujet">Sujet</label>
+      <div class="controls">
+          <input name="sujet" id="sujet" type="text" value="{{sujet}}" placeholder="Notez ici le sujet que vous voulez décrire (exemple : 'La Voiture de David')" class="form-control"/>
+      <span class="help-block">{{errorMessage 'sujet'}}</span> 
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'propriete'}}">
+      <label class="control-label" for="propriete">Propriete</label>
+      <div class="controls">
+          <input name="propriete" id="propriete" type="text" value="{{propriete}}" placeholder="une propriete (exemple : 'aPourCouleur')" class="form-control"/>
+          <span class="help-block">{{errorMessage 'propriete'}}</span>
+      </div>
+    </div>
+
+    <div class="form-group {{errorClass 'objet'}}">
+      <label class="control-label" for="objet">Objet</label>
+      <div class="controls">
+          <input name="objet" id="objet" type="text" value="{{objet}}" placeholder="La valeur de cette propriete (exemple : jaune)" class="form-control"/>
+          <span class="help-block">{{errorMessage 'objet'}}</span>
+      </div>
+    </div>	
+	
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    <hr/>
+  <!--  <a class="btn btn-danger delete" href="#">Delete post</a> -->
+  </form>
+</template>
